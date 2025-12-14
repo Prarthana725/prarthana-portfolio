@@ -44,6 +44,17 @@ export default function Projects() {
         'https://www.figma.com/design/Ug2t37NzUzWFXBD2HDKtDK/LMS-System',
       tags: ['Website', 'Content', 'Layout'],
     },
+   {
+  title: 'My Portfolio Website Design',
+  category: 'Personal Project',
+  description:
+    'Designed and structured my personal portfolio website with a clean blue and white theme, focusing on layout hierarchy, smooth user flow, and responsive UI design.',
+  imageSrc: '/project 5.png',
+  caseStudyUrl:
+    'https://www.figma.com/design/JK3Z4gryXY6eo4k6KnaQnr/Portfolio?node-id=0-1&t=dtc0lsQy5jMVaJMm-1',
+  tags: ['UI/UX Design', 'Website', 'Responsive Layout'],
+}
+,
   ]
 
   const containerVariants: Variants = {
