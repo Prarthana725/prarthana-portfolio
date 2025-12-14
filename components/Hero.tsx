@@ -4,7 +4,6 @@ import { motion, Variants } from 'framer-motion'
 import Image from 'next/image'
 
 export default function Hero() {
-
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
@@ -65,36 +64,28 @@ export default function Hero() {
       >
         {/* LEFT SIDE */}
         <motion.div className="space-y-8 z-10" variants={itemVariants}>
-          <div className="space-y-4">
-            <motion.h1 className="text-5xl md:text-7xl font-black leading-tight">
-              <motion.span
-                className="text-white block"
-                variants={itemVariants}
-              >
-                Crafting Digital
-              </motion.span>
-              <motion.span
-                className="text-warm-orange neon-glow block"
-                variants={itemVariants}
-              >
-                Experiences
-              </motion.span>
-              <motion.span
-                className="text-white block"
-                variants={itemVariants}
-              >
-                That Inspire
-              </motion.span>
-            </motion.h1>
-
-            <motion.p
-              className="text-xl text-gray-400 font-light leading-relaxed max-w-xl"
+          <motion.h1 className="text-5xl md:text-7xl font-black leading-tight">
+            <motion.span className="text-white block" variants={itemVariants}>
+              Crafting Digital
+            </motion.span>
+            <motion.span
+              className="text-warm-orange neon-glow block"
               variants={itemVariants}
             >
-              UI/UX and Graphic Design Student passionate about learning and creating
-              intuitive, beautiful digital experiences and visual designs.
-            </motion.p>
-          </div>
+              Experiences
+            </motion.span>
+            <motion.span className="text-white block" variants={itemVariants}>
+              That Inspire
+            </motion.span>
+          </motion.h1>
+
+          <motion.p
+            className="text-xl text-gray-400 leading-relaxed max-w-xl"
+            variants={itemVariants}
+          >
+            UI/UX and Graphic Design student passionate about learning and creating
+            intuitive, beautiful digital experiences.
+          </motion.p>
 
           <motion.div
             className="flex flex-col sm:flex-row gap-4 pt-4"
@@ -159,7 +150,7 @@ export default function Hero() {
               </div>
             </motion.div>
 
-            {/* Floating particles */}
+            {/* PARTICLES */}
             <motion.div
               className="absolute top-10 left-10 w-2 h-2 bg-warm-orange rounded-full"
               variants={particleVariants}
