@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { motion, Variants } from 'framer-motion'
 
 export default function Services() {
 
@@ -37,7 +37,7 @@ export default function Services() {
     },
   ]
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -47,7 +47,7 @@ export default function Services() {
     },
   }
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 50, scale: 0.9 },
     visible: {
       opacity: 1,
@@ -63,6 +63,8 @@ export default function Services() {
   return (
     <section id="services" className="py-32 relative">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+
+        {/* Header */}
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: -30 }}
@@ -71,7 +73,9 @@ export default function Services() {
           transition={{ duration: 0.6 }}
         >
           <div className="inline-block mb-4">
-            <span className="text-warm-orange text-sm font-semibold tracking-wider uppercase">Focus Areas</span>
+            <span className="text-warm-orange text-sm font-semibold tracking-wider uppercase">
+              Focus Areas
+            </span>
             <motion.div
               className="h-0.5 bg-gradient-to-r from-warm-orange to-neon-orange mt-2 mx-auto"
               initial={{ width: 0 }}
@@ -80,14 +84,17 @@ export default function Services() {
               transition={{ duration: 0.6, delay: 0.2 }}
             />
           </div>
+
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             What I'm <span className="text-warm-orange neon-glow">Learning</span>
           </h2>
+
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             Key areas I'm focusing on to grow as a UI/UX designer
           </p>
         </motion.div>
 
+        {/* Cards */}
         <motion.div
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
           variants={containerVariants}
@@ -95,22 +102,26 @@ export default function Services() {
           whileInView="visible"
           viewport={{ once: true, margin: '-50px' }}
         >
-          {services.map((service, index) => (
+          {services.map((service) => (
             <motion.div
               key={service.title}
               className="group glass-card rounded-xl p-8 border border-warm-orange/20 hover:border-warm-orange/40 transition-all duration-300 relative overflow-hidden"
               variants={itemVariants}
-              whileHover={{ scale: 1.05, y: -10, boxShadow: '0 0 30px rgba(255, 77, 0, 0.3)' }}
+              whileHover={{
+                scale: 1.05,
+                y: -10,
+                boxShadow: '0 0 30px rgba(255, 77, 0, 0.3)',
+              }}
               transition={{ duration: 0.3 }}
             >
-              {/* Orange edge glow */}
+              {/* Edge glow */}
               <motion.div
                 className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-warm-orange to-transparent"
                 initial={{ opacity: 0 }}
                 whileHover={{ opacity: 1 }}
                 transition={{ duration: 0.3 }}
               />
-              
+
               <div className="space-y-4">
                 <motion.div
                   className="text-5xl mb-4"
@@ -119,7 +130,11 @@ export default function Services() {
                 >
                   {service.icon}
                 </motion.div>
-                <h3 className="text-xl font-bold text-white">{service.title}</h3>
+
+                <h3 className="text-xl font-bold text-white">
+                  {service.title}
+                </h3>
+
                 <p className="text-gray-400 leading-relaxed text-sm">
                   {service.description}
                 </p>
@@ -131,4 +146,3 @@ export default function Services() {
     </section>
   )
 }
-
