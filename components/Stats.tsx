@@ -3,7 +3,6 @@
 import { motion, Variants } from 'framer-motion'
 
 export default function Stats() {
-
   const stats = [
     { number: '5+', label: 'Projects Completed', icon: '🚀' },
     { number: '2+', label: 'Design Tools', icon: '🎨' },
