@@ -1,0 +1,102 @@
+/* App.css */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Merriweather Sans', sans-serif;
+}
+
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(112.34deg, rgba(22, 33, 80, 0) 36.32%, rgba(23, 24, 76, 0.2) 64.56%),
+              radial-gradient(35.07% 49.32% at 80.42% 49.37%, #1C2D43 20.19%, #0B1829 39.08%, #010B1A 56.73%);
+  color: white;
+  overflow: hidden;
+}
+
+.navbar {
+  position: absolute;
+  top: 45px;
+  left: 102px;
+  right: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Konkhmer Sleokchher', cursive;
+  font-size: 26px;
+  line-height: 47px;
+  color: #FFFFFF;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.nav-item {
+  font-family: 'Konkhmer Sleokchher', cursive;
+  font-size: 21px;
+  line-height: 38px;
+  color: #FFFBFB;
+  text-decoration: none;
+}
+
+.hero-section {
+  position: absolute;
+  left: 102px;
+  top: 206px;
+  width: 727px;
+}
+
+.heading {
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 80px;
+}
+
+.name {
+  font-weight: 700;
+  color: #B3B8D1;
+}
+
+.subheading {
+  margin-top: 12px;
+  font-weight: 400;
+  font-size: 55px;
+  line-height: 69px;
+  color: #FFF9F9;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.description {
+  margin-top: 30px;
+  width: 613px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.06em;
+  color: #FFFFFF;
+}
+
+.cta {
+  margin-top: 40px;
+  width: 151px;
+  height: 36px;
+  background-color: #FAFAF9;
+  color: #000;
+  border-radius: 9px;
+  font-size: 21px;
+  font-family: 'Konkhmer Sleokchher', cursive;
+  border: none;
+  cursor: pointer;
+}
