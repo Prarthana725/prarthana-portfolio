@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { motion, Variants } from 'framer-motion'
 
 export default function Stats() {
 
@@ -11,7 +11,7 @@ export default function Stats() {
     { number: '8+', label: 'Skills Mastered', icon: '💯' },
   ]
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -21,7 +21,7 @@ export default function Stats() {
     },
   }
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 30, scale: 0.8 },
     visible: {
       opacity: 1,
@@ -53,27 +53,34 @@ export default function Stats() {
               whileHover={{ scale: 1.05, y: -5 }}
               transition={{ duration: 0.2 }}
             >
-              {/* Glow effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-warm-orange/0 to-neon-orange/0 group-hover:from-warm-orange/10 group-hover:to-neon-orange/5 rounded-xl transition-all duration-300"></div>
-              
+              {/* Glow */}
+              <div className="absolute inset-0 bg-gradient-to-br from-warm-orange/0 to-neon-orange/0 group-hover:from-warm-orange/10 group-hover:to-neon-orange/5 rounded-xl transition-all duration-300" />
+
               <div className="relative z-10 space-y-3">
                 <motion.div
-                  className="text-3xl mb-2"
+                  className="text-3xl"
                   whileInView={{ rotate: [0, 10, -10, 0] }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.15 }}
                 >
                   {stat.icon}
                 </motion.div>
+
                 <motion.div
                   className="text-3xl md:text-4xl font-bold text-warm-orange neon-glow"
                   initial={{ opacity: 0, scale: 0 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.15 + 0.2, type: 'spring', stiffness: 200 }}
+                  transition={{
+                    duration: 0.5,
+                    delay: index * 0.15 + 0.2,
+                    type: 'spring',
+                    stiffness: 200,
+                  }}
                 >
                   {stat.number}
                 </motion.div>
+
                 <div className="text-gray-400 text-sm font-medium">
                   {stat.label}
                 </div>
@@ -85,4 +92,3 @@ export default function Stats() {
     </section>
   )
 }
-
